@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>VR</title>
     <meta name="description" content="aFrame">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+	<script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
     <script src="components/set-image.js"></script>
   </head>
+  
   <body>
     <a-scene>
       <a-assets>
-         <img id="compu" crossorigin="anonymous" src="img/ro.png">
+         <img id="compu" crossorigin="anonymous" src="img/ro.png" >
         <img id="compu-thumb" crossorigin="anonymous" src="img/u424.png">
         <img id="yel-thumb" crossorigin="anonymous" src="img/u426.png">
         <img id="yel" crossorigin="anonymous" src="img/r.JPG">
@@ -44,12 +44,12 @@
       <a-sky id="image-360" radius="10" src="#ele" ></a-sky>
 
       <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="-2 3 -4">
-        <a-entity template="src: #link" data-src="#yel" data-thumb="#yel-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#compu" data-thumb="#compu-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#gre" data-thumb="#gre-thumb"></a-entity>
-		<a-entity template="src: #link" data-src="#ele" data-thumb="#ele-thumb"></a-entity>
-		<a-entity template="src: #link" data-src="#appl" data-thumb="#appl-thumb"></a-entity>
+      <a-entity id="links" layout="type: line; margin: 1.5" >
+        <a-entity template="src: #link" data-src="#yel" data-thumb="#yel-thumb" position="-2 1 -4.5" ></a-entity>
+        <a-entity template="src: #link" data-src="#compu" data-thumb="#compu-thumb" position="0 1 -4.5"></a-entity>
+        <a-entity template="src: #link" data-src="#gre" data-thumb="#gre-thumb" position="2 1 -4.5"></a-entity>
+		<a-entity template="src: #link" data-src="#ele" data-thumb="#ele-thumb" position="2 2.5 -4.5"></a-entity>
+		<a-entity template="src: #link" data-src="#appl" data-thumb="#appl-thumb" position="-2 2.5 -4.5"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
