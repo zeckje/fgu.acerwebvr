@@ -4,25 +4,27 @@
     <meta charset="utf-8">
     <title>VR</title>
     <meta name="description" content="aFrame">
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-	<script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="components/aframe.min.js.map.js"></script>
+	<script src="components/animation.js"></script>
+    <script src="components/aframe-template.js"></script>
     <script src="components/set-image.js"></script>
   </head>
   
   <body>
     <a-scene>
       <a-assets>
-         <img id="compu" crossorigin="anonymous" src="img/ro.png" >
-        <img id="compu-thumb" crossorigin="anonymous" src="img/u424.png">
+	    <img id="compu-thumb" crossorigin="anonymous" src="img/u424.png">
+        <img id="compu" crossorigin="anonymous" src="img/r.png" >
         <img id="yel-thumb" crossorigin="anonymous" src="img/u426.png">
-        <img id="yel" crossorigin="anonymous" src="img/r.JPG">
+        <img id="yel" crossorigin="anonymous" src="img/ro.png">
 		<img id="gre-thumb" crossorigin="anonymous" src="img/aibtn.png">
         <img id="gre" crossorigin="anonymous" src="img/roo.png">
 		<img id="ele-thumb" crossorigin="anonymous" src="img/elemt.png">
         <img id="ele" crossorigin="anonymous" src="img/room.JPG">
 		<img id="appl-thumb" crossorigin="anonymous" src="img/u412.png">
-        <img id="appl" crossorigin="anonymous" src="img/roomr.JPG">
+        <img id="appl" crossorigin="anonymous" src="img/roomr.png">
+		<img id="VR-thumb" crossorigin="anonymous" src="img/vr.png">
+        <img id="VR" crossorigin="anonymous" src="img/vroom.JPG">
 		
 
         <!-- Image link template to be reused. -->
@@ -44,11 +46,12 @@
 
       <!-- Image links. -->
       <a-entity id="links" layout="type: line; margin: 1.5" >
-        <a-entity template="src: #link" data-src="#yel" data-thumb="#yel-thumb" position="-2 1 -4.5" ></a-entity>
-        <a-entity template="src: #link" data-src="#compu" data-thumb="#compu-thumb" position="0 1 -4.5"></a-entity>
-        <a-entity template="src: #link" data-src="#gre" data-thumb="#gre-thumb" position="2 1 -4.5"></a-entity>
-		<a-entity template="src: #link" data-src="#ele" data-thumb="#ele-thumb" position="2 2.5 -4.5"></a-entity>
-		<a-entity template="src: #link" data-src="#appl" data-thumb="#appl-thumb" position="-2 2.5 -4.5"></a-entity>
+        <a-entity template="src: #link" data-src="#yel" data-thumb="#yel-thumb" position="-2 -4.5 -1.5" rotation="-90 0 0"></a-entity>
+        <a-entity template="src: #link" data-src="#compu" data-thumb="#compu-thumb" position="0 -4.5 -1.5" rotation="-90 0 0"></a-entity>
+        <a-entity template="src: #link" data-src="#gre" data-thumb="#gre-thumb" position="2 -4.5 -1.5" rotation="-90 0 0"></a-entity>
+		<a-entity template="src: #link" data-src="#ele" data-thumb="#ele-thumb" position="2 -4.5 -2.5" rotation="-90 0 0"></a-entity>
+		<a-entity template="src: #link" data-src="#VR" data-thumb="#VR-thumb" position="0 -4.5 -2.5" rotation="-90 0 0"></a-entity>
+		<a-entity template="src: #link" data-src="#appl" data-thumb="#appl-thumb" position="-2 -4.5 -2.5" rotation="-90 0 0"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
